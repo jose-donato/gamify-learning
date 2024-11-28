@@ -2,16 +2,11 @@
 
 import { useState } from "react";
 
-import { Button } from "@/app/_components/ui/button";
-import {
-	Card,
-	CardContent,
-	CardHeader,
-	CardTitle,
-} from "@/app/_components/ui/card";
-import { Input } from "@/app/_components/ui/input";
-import { Label } from "@/app/_components/ui/label";
-import { Textarea } from "@/app/_components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { ArrowLeft, LinkIcon, Upload } from "lucide-react";
 import Link from "next/link";
 

@@ -2,16 +2,16 @@
 
 import { useState } from "react";
 
-import { Button } from "@/app/_components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardContent,
 	CardFooter,
 	CardHeader,
 	CardTitle,
-} from "@/app/_components/ui/card";
-import { Label } from "@/app/_components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/app/_components/ui/radio-group";
+} from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { ArrowLeft, CheckCircle2, XCircle } from "lucide-react";
 import Link from "next/link";
 

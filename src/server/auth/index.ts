@@ -1,10 +1,15 @@
+import { DrizzleAdapter } from "@auth/drizzle-adapter";
 import NextAuth from "next-auth";
-import { cache } from "react";
+import { db } from "../db";
+import { accounts, sessions, users, verificationTokens } from "../db/schema";
+import authConfig from "./config";
 
-import { authConfig } from "./config";
-
-const { auth: uncachedAuth, handlers, signIn, signOut } = NextAuth(authConfig);
-
-const auth = cache(uncachedAuth);
-
-export { auth, handlers, signIn, signOut };
+export const { handlers, auth, signIn, signOut } = NextAuth({
+	adapter: DrizzleAdapter(db, {
+		usersTable: users,
+		accountsTable: accounts,
+		sessionsTable: sessions,
+		verificationTokensTable: verificationTokens,
+	}),
+	...authConfig,
+});
